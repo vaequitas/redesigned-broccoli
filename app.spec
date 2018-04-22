@@ -16,13 +16,17 @@ Requires: php httpd
 %description
 This is a basic application for demonstrating yum-based repositories
 
+%prep
+%setup -q -n app
+
 %build
 
 %install
+mkdir -p $RPM_BUILD_ROOT/var/www/app
+cp -r * $RPM_BUILD_ROOT/var/www/app
 
 %clean
+rm -rf $RPM_BUILD_ROOT/var/www/app
 
 %files
-
-%post
-service httpd restart
+/var/www/app
