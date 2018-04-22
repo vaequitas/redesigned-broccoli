@@ -1,4 +1,4 @@
-FROM centos:centos7
+FROM centos:centos6
 
 RUN yum clean all
 RUN yum -y update
@@ -15,7 +15,7 @@ ADD ./build.sh /build.sh
 
 RUN chmod +x /build.sh
 
-ADD ./app.tar.gz /root/rpmbuild/SOURCES/app.tar.gz
+COPY ./app.tar.gz /root/rpmbuild/SOURCES/app.tar.gz
 
 VOLUME ["/rpms"]
 
