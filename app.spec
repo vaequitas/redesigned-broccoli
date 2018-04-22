@@ -3,8 +3,8 @@
 %define name app
 
 Name: %{name}
-Summary: Our HelloWorld application
-Vendor: OurOrg
+Summary:HelloWorld application
+Vendor: HelloWorld
 Release: %{release}
 License: GPL
 Group: Applications/ExampleOrg
