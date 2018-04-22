@@ -11,7 +11,7 @@ Group: Applications/ExampleOrg
 Version: %{version}
 Source: %{name}.tar.gz
 BuildArch: x86_64
-Requires: php httpd
+Requires: httpd
 
 %description
 This is a basic application for demonstrating yum-based repositories
@@ -22,11 +22,11 @@ This is a basic application for demonstrating yum-based repositories
 %build
 
 %install
-mkdir -p $RPM_BUILD_ROOT/var/www/app
-cp -r * $RPM_BUILD_ROOT/var/www/app
+mkdir -p $RPM_BUILD_ROOT/var/www/html/app
+cp -r * $RPM_BUILD_ROOT/var/www/html/app
 
 %clean
-rm -rf $RPM_BUILD_ROOT/var/www/app
+rm -rf $RPM_BUILD_ROOT/var/www/html/app
 
 %files
-/var/www/app
+/var/www/html/app
