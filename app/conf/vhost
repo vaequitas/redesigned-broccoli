@@ -1,0 +1,4 @@
+<VirtualHost *:80>
+    DocumentRoot "/var/www/app/public"
+    ServerName app.demo.com
+</VirtualHost>
