@@ -23,7 +23,7 @@ This is a basic application for demonstrating yum-based repositories
 
 %install
 mkdir -p $RPM_BUILD_ROOT/var/www/html/app
-cp -r * $RPM_BUILD_ROOT/var/www/html/app
+cp -r public/index.html $RPM_BUILD_ROOT/var/www/html/app
 
 %clean
 rm -rf $RPM_BUILD_ROOT/var/www/html/app
